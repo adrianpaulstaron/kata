@@ -26,8 +26,14 @@ describe('Testing', function () {
         it('should take into account a bonus throw', function () {
             assert.equal(scoreTotal([[4,6], [1,0], [0,0], [0,0], [0,0], [0,0], [4,6], [1,0], [0,0], [10,0], [5,2]]), 48);
         });
-        it('should take into account a bonus throw', function () {
-            assert.equal(scoreTotal([[10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,10,10]]), 300);
+        it('should work with a 3-throw turn', function () {
+            assert.equal(scoreTotal([[0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [0,0], [1,2,3]]), 6);
         });
-    });
-});
+        // it('should work with one strike followed by two non-strikes', function () {
+        //     assert.equal(scoreTotal([[10,0], [1,2]], 16);
+        // });
+        // it('should work with a perfect game', function () {
+        //     assert.equal(scoreTotal([[10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,0], [10,10,10]]), 300);
+        // });
+    }); 
+}); 
